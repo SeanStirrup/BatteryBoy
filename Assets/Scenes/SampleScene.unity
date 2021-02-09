@@ -3608,7 +3608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034145441}
   - component: {fileID: 1034145442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AlertRange
   m_TagString: EnemyAlertRange
   m_Icon: {fileID: 0}
@@ -3991,6 +3991,7 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   PlayerPosition: {fileID: 1087700762}
   speed: 1
+  facingRight: 0
 --- !u!1 &1170412517
 GameObject:
   m_ObjectHideFlags: 0
@@ -8848,6 +8849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400959686140891493, guid: 9fa13a885b7310143989df3e2a7a05c3,
+        type: 3}
+      propertyPath: m_JumpForce
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fa13a885b7310143989df3e2a7a05c3, type: 3}

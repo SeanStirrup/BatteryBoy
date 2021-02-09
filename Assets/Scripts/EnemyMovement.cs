@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
     public Vector3 position;
     public GameObject PlayerPosition;
     public float speed;
+    public bool facingRight;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +28,23 @@ public class EnemyMovement : MonoBehaviour
             float step = speed * Time.deltaTime;
             target = new Vector3(PlayerPosition.transform.position.x, PlayerPosition.transform.position.y, PlayerPosition.transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, target, step);
+
+            //flips the direction the sprite is facing to the player
+            if (PlayerPosition.transform.position.x <= transform.position.x)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
         }
         else 
         {
             Anim.SetBool("EnemySpotted", false);
         }
+
+
     }
 
 

@@ -20,6 +20,11 @@ public class PhysicsMovement : MonoBehaviour
 
     public bool playerCanMove = true;
 
+    public void Start()
+    {
+        runSpeed = 10;
+    }
+
     void Update()
     {
         //counts down the timer that allows the player to move after shooting 
@@ -42,7 +47,7 @@ public class PhysicsMovement : MonoBehaviour
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
             animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
             {
                 jump = true;
                 animator.SetBool("IsJumping", true);
@@ -119,23 +124,6 @@ public class PhysicsMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
-
-    //needed to prevent weird bug that slowed the player when it collided with the range checker
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("EnemyAlertRange"))
-        {
-            runSpeed = 10;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("EnemyAlertRange"))
-        {
-            runSpeed = 10;
         }
     }
 }

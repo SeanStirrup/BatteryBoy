@@ -17,6 +17,7 @@ public class PhysicsMovement : MonoBehaviour
     public float playerAttackCooldown = 0.5f;
 
     public float stopMoveWhileShootTimer;
+    public float jumpAgainTimer;
 
     public bool playerCanMove = true;
 
@@ -30,6 +31,7 @@ public class PhysicsMovement : MonoBehaviour
         //counts down the timer that allows the player to move after shooting 
         //anything below 0 allows the player to move
         stopMoveWhileShootTimer -= Time.deltaTime;
+        jumpAgainTimer -= Time.deltaTime;
 
         //if the timer is below 0, can move
         //otherwise no
@@ -46,11 +48,13 @@ public class PhysicsMovement : MonoBehaviour
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
             animator.SetFloat("speed", Mathf.Abs(horizontalMove));
-
-            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+            if (jumpAgainTimer <= 0)
             {
-                jump = true;
-                animator.SetBool("IsJumping", true);
+                if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+                {
+                    jump = true;
+                    animator.SetBool("IsJumping", true);
+                }
             }
 
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -83,16 +87,12 @@ public class PhysicsMovement : MonoBehaviour
                 animator.SetTrigger("Shoot");
                 animator.SetTrigger("Stop");
             }
-
         }
-
-
     }
 
     public void stopMovement() 
     {
         playerCanMove = false;
-
         //CHANGE THIS FLOAT HERE TO ADJUST HOW LONG BOI CAN'T MOVE FOR AFTER SHOOTING
         stopMoveWhileShootTimer = 1f;
 
@@ -109,6 +109,7 @@ public class PhysicsMovement : MonoBehaviour
     public void OnLanding()
     {
         jump = false;
+        jumpAgainTimer = 0.1f;
         animator.SetBool("IsJumping", false);
     }
 

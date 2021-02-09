@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 0b2728fc1e2e4ea46b718939cdc9b07c
+guid: 307648ebe7331014e9ca5e3ac40ef2b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2949226845218393224
-    second: NutBoiParticleBOOm_0
+      213: 5155816084551218144
+    second: NutBoiWalkBad_0
   - first:
-      213: -1384760499717424054
-    second: NutBoiParticleBOOm_0
+      213: 3271261212647921192
+    second: NutBoiWalkBad_1
   - first:
-      213: 6513052831338189990
-    second: NutBoiParticleBOOm_1
+      213: 7795707848443334632
+    second: NutBoiWalkBad_2
   - first:
-      213: -2296958506811250253
-    second: NutBoiParticleBOOm_2
-  - first:
-      213: 7437851354308923031
-    second: NutBoiParticleBOOm_3
+      213: -4683531202154546239
+    second: NutBoiWalkBad_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -60,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -79,7 +76,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,19 +88,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +100,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NutBoiParticleBOOm_0
+      name: NutBoiWalkBad_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 10
-        width: 30
-        height: 13
+        x: 0
+        y: 2
+        width: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4cb95b89a758cce0800000000000000
-      internalID: -1384760499717424054
+      spriteID: 0e3bbe689632d8740800000000000000
+      internalID: 5155816084551218144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NutBoiParticleBOOm_1
+      name: NutBoiWalkBad_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 9
-        width: 29
-        height: 15
+        x: 32
+        y: 2
+        width: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a4d34fda03036a50800000000000000
-      internalID: 6513052831338189990
+      spriteID: 8269463bdbad56d20800000000000000
+      internalID: 3271261212647921192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NutBoiParticleBOOm_2
+      name: NutBoiWalkBad_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 10
-        width: 33
-        height: 15
+        x: 64
+        y: 2
+        width: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b924b968609f10e0800000000000000
-      internalID: -2296958506811250253
+      spriteID: 8ef80371cfaef2c60800000000000000
+      internalID: 7795707848443334632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NutBoiParticleBOOm_3
+      name: NutBoiWalkBad_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 11
-        width: 28
-        height: 12
+        x: 96
+        y: 2
+        width: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79ecdb9366e883760800000000000000
-      internalID: 7437851354308923031
+      spriteID: 1cbbe11af21c00fb0800000000000000
+      internalID: -4683531202154546239
       vertices: []
       indices: 
       edges: []

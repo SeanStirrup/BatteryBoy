@@ -75,18 +75,24 @@ public class PhysicsMovement : MonoBehaviour
             //made space shoot now
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //shoots the bullet, prevents shooting again for 1 second, removes one from battery amount and prevents player movement
-                Instantiate(playerAttack, attackSpawner.transform.position, attackSpawner.transform.rotation);
-                playerAttackCooldown = 1;
-                BatteryBarSliderController.batterySliderCurrent--;
-                playerCanMove = false;
+                animator.SetTrigger("Shoot");
 
-                //CHANGE THIS FLOAT HERE TO ADJUST HOW LONG BOI CAN'T MOVE FOR AFTER SHOOTING
-                stopMoveWhileShootTimer = 1f;
             }
         }
 
 
+    }
+
+    public void Shoot()
+    {
+        //shoots the bullet, prevents shooting again for 1 second, removes one from battery amount and prevents player movement
+        Instantiate(playerAttack, attackSpawner.transform.position, attackSpawner.transform.rotation);
+        playerAttackCooldown = 1;
+        BatteryBarSliderController.batterySliderCurrent--;
+        playerCanMove = false;
+
+        //CHANGE THIS FLOAT HERE TO ADJUST HOW LONG BOI CAN'T MOVE FOR AFTER SHOOTING
+        stopMoveWhileShootTimer = 1f;
     }
 
     public void OnLanding()
@@ -121,7 +127,7 @@ public class PhysicsMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("EnemyAlertRange"))
         {
-            runSpeed = 30;
+            runSpeed = 10;
         }
     }
 

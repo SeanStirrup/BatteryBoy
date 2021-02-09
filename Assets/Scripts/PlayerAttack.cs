@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
 
     public float speed = 20f;
     public Rigidbody2D rb;
-
+   
     public float attackDestroyCooldown;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,8 @@ public class PlayerAttack : MonoBehaviour
             rb.velocity = new Vector3(1, 0, 0) * speed;
             transform.localScale = new Vector3(1, 1, 1);
         }
+
+        //speed = 20f;
     }
 
     // Update is called once per frame

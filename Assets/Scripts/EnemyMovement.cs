@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+    private Animator Anim;
     public GameObject alertSprite;
     public bool playerInRange = false;
     public Vector3 target;
@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Anim = GetComponent<Animator>();
         playerInRange = false;
     }
 
@@ -22,9 +23,14 @@ public class EnemyMovement : MonoBehaviour
     {
         if (playerInRange == true)
         {
+            Anim.SetBool("EnemySpotted", true);
             float step = speed * Time.deltaTime;
             target = new Vector3(PlayerPosition.transform.position.x, PlayerPosition.transform.position.y, PlayerPosition.transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, target, step);
+        }
+        else 
+        {
+            Anim.SetBool("EnemySpotted", false);
         }
     }
 

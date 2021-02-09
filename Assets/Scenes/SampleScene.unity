@@ -8855,6 +8855,11 @@ PrefabInstance:
       propertyPath: m_JumpForce
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 1400959686140891493, guid: 9fa13a885b7310143989df3e2a7a05c3,
+        type: 3}
+      propertyPath: m_AirControl
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fa13a885b7310143989df3e2a7a05c3, type: 3}
 --- !u!1001 &7019109696454749487

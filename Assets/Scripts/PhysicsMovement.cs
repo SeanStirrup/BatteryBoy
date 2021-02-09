@@ -81,10 +81,20 @@ public class PhysicsMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 animator.SetTrigger("Shoot");
-
+                animator.SetTrigger("Stop");
             }
+
         }
 
+
+    }
+
+    public void stopMovement() 
+    {
+        playerCanMove = false;
+
+        //CHANGE THIS FLOAT HERE TO ADJUST HOW LONG BOI CAN'T MOVE FOR AFTER SHOOTING
+        stopMoveWhileShootTimer = 1f;
 
     }
 
@@ -94,10 +104,6 @@ public class PhysicsMovement : MonoBehaviour
         Instantiate(playerAttack, attackSpawner.transform.position, attackSpawner.transform.rotation);
         playerAttackCooldown = 1;
         BatteryBarSliderController.batterySliderCurrent--;
-        playerCanMove = false;
-
-        //CHANGE THIS FLOAT HERE TO ADJUST HOW LONG BOI CAN'T MOVE FOR AFTER SHOOTING
-        stopMoveWhileShootTimer = 1f;
     }
 
     public void OnLanding()

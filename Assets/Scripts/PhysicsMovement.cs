@@ -101,6 +101,7 @@ public class PhysicsMovement : MonoBehaviour
     public void Shoot()
     {
         //shoots the bullet, prevents shooting again for 1 second, removes one from battery amount and prevents player movement
+        PlayerShootSound.PlayerShootBool = true;
         Instantiate(playerAttack, attackSpawner.transform.position, attackSpawner.transform.rotation);
         playerAttackCooldown = 1;
         BatteryBarSliderController.batterySliderCurrent--;
@@ -130,6 +131,7 @@ public class PhysicsMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Enemy"))
         {
+            PlayerDeath.PlayerDeathBool = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

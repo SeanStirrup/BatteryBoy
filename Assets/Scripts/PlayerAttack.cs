@@ -43,6 +43,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            DeathSoundScript.DeathBool = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
